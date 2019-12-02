@@ -10,6 +10,12 @@
 	git remote set-url origin https://github.com/WinA-O/RN.git
 </pre>
 
+# React
+	npm install -g npx
+	react creat-react-app 앱이름
+	
+</pre>
+
 # Issue
 <pre>
 	상황 : 깃 푸시가 안됨
