@@ -1,5 +1,5 @@
 import React from 'react';
-// import axios from 'axios';
+import axios from 'axios';
 
 /*
   1. 네트워크에 존재하는 데이터를 가져아서 const변수에 넣음
@@ -8,12 +8,12 @@ import React from 'react';
   2. const 변수를 view시킨다
 */
 
-// const API_KEY = "524a130893027ea4aebef3cd951b1caa";
-// const URL = "https://api.themoviedb.org/3/";
-// const param = {
-//   path: "movie/popular",
-//   lan: "en" 
-// }
+const API_KEY = "524a130893027ea4aebef3cd951b1caa";
+const URL = "https://api.themoviedb.org/3/";
+const param = {
+  path: "movie/popular",
+  lan: "en" 
+}
 
 function App(){
   const axios = require("axios");//네트워크에 있는 데이터 가져오는 기능
@@ -29,13 +29,16 @@ function App(){
     console.log(movies);
 
     const movieList = document.getElementById("movieList");
+
     for(let i = 0; i < movies.length; i++){
       const li = document.createElement("li");
       const span = document.createElement("span");
+      const img = document.createElement("ing");
 
-      span.innerHTML = movies[i].title;
-      console.log(movies[i].title);
+      img.src = "https://image.tndb.org/t/p/w500npm" + movies[i].poster_path;
+      span.innerHTMLs = movies[i].title;
       li.appendChild(span);
+      li.appendChild(img);
 
       movieList.appendChild(li);
     };
